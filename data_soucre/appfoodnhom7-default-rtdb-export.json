@@ -1,0 +1,110 @@
+{
+  "Category": {
+    "01": {
+      "Image": "https://i.pinimg.com/564x/4f/18/3f/4f183fc21d358cbe3f3ffdc12522d545.jpg",
+      "Name": "Món Việt"
+    },
+    "02": {
+      "Image": "https://i.pinimg.com/564x/32/22/d7/3222d71465e67a0db9e2cf12501ea99a.jpg",
+      "Name": "Đồ uống"
+    },
+    "03": {
+      "Image": "https://i.pinimg.com/564x/9f/4d/7d/9f4d7d10891dcc0e0c7b4dcc113740bf.jpg",
+      "Name": "Ăn vặt"
+    },
+    "04": {
+      "Image": "https://i.pinimg.com/564x/34/e7/f2/34e7f2003af08d7037681cfb7a35a6ef.jpg",
+      "Name": "Tráng miệng"
+    },
+    "05": {
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "Name": "Món Quốc Tế"
+    },
+    "06": {
+      "Image": "https://i.pinimg.com/564x/2c/4d/dc/2c4ddcf9882f17bd7975019ba45ec3d7.jpg",
+      "Name": "Trà Sữa"
+    },
+    "07": {
+      "Image": "https://i.pinimg.com/564x/d2/d1/83/d2d183935ccf939cd2798cf5513b3f99.jpg",
+      "Name": "Lẩu/Nướng"
+    },
+    "08": {
+      "Image": "https://i.pinimg.com/564x/5b/7b/75/5b7b7539f19c89aa1deea885f2d894c3.jpg",
+      "Name": "Đặc Sản"
+    }
+  },
+  "Food": {
+    "01": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "02",
+      "Name": "Humbuger",
+      "Price": "15.05"
+    },
+    "02": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "02",
+      "Name": "Humbuger01",
+      "Price": "15.05"
+    },
+    "03": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "05",
+      "Name": "Humbuger02",
+      "Price": "15.05"
+    },
+    "04": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "01",
+      "Name": "Humbuger03",
+      "Price": "15.05"
+    },
+    "05": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "05",
+      "Name": "Humbuger04",
+      "Price": "15.05"
+    },
+    "06": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "01",
+      "Name": "Humbuger05",
+      "Price": "15.05"
+    },
+    "07": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "08",
+      "Name": "Humbuger06",
+      "Price": "15.05"
+    },
+    "08": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "02",
+      "Name": "Humbuger07",
+      "Price": "15.05"
+    },
+    "09": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "08",
+      "Name": "Humbuger08",
+      "Price": "15.05"
+    }
+  }
+}
