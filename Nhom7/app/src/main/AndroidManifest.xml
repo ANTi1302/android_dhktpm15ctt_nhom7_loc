@@ -22,7 +22,7 @@
             android:name=".MainActivity9"
             android:exported="false" />
         <activity
-            android:name=".MainActivity8"
+            android:name=".CartActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity7"

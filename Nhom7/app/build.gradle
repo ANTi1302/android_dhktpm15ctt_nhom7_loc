@@ -46,4 +46,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.firebaseui:firebase-ui-database:1.2.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 }

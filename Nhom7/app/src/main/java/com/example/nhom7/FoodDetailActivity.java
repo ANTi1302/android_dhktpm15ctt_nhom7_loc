@@ -11,8 +11,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.nhom7.DB.Database;
+import com.example.nhom7.HolderViewItem.FoodViewOfListHolder;
+import com.example.nhom7.Interface.ItemClickListen;
 import com.example.nhom7.Model.Food;
+import com.example.nhom7.Model.Order;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,11 +30,12 @@ public class FoodDetailActivity extends AppCompatActivity {
     private DatabaseReference food;
     TextView txtName,txtPriceDetail,txtCate,txtCount,txtPrice;
     ImageView imgFood, imgBack;
-    Button btnAddFood,btnAddCart;
-    ImageButton btnSub,btnRemove;
+    Button btnAddFood;
+    ImageButton btnSub,btnRemove,btnAddCart;
     private int mLesson = 1;
     private String foodId="";
     private String cate="";
+    Food currentfood;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +51,23 @@ public class FoodDetailActivity extends AppCompatActivity {
         txtCate=findViewById(R.id.category_name_detail);
         imgFood=findViewById(R.id.img_fooddetail);
         imgBack=findViewById(R.id.imgBackDetail);
-        btnAddCart=findViewById(R.id.addCart);
+        btnAddCart=findViewById(R.id.addFood);
 
+        btnAddCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                new Database(getBaseContext()).addToCart(new Order(
+                        foodId,
+                        currentfood.getName(),
+                        txtCount.getText().toString(),
+                        currentfood.getPrice(),
+                        currentfood.getDiscount()
+                ));
+                Toast.makeText(FoodDetailActivity.this,"Added to Cart",Toast.LENGTH_LONG).show();
+
+            }
+        });
          //Xu ly btnSub, btnRemove
         btnSub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,25 +103,28 @@ public class FoodDetailActivity extends AppCompatActivity {
         //Get intent here
         if (getIntent()!=null){
             foodId=getIntent().getStringExtra("FoodId");
-            cate =getIntent().getStringExtra("CategoryName");
-            txtCate.setText(cate);
+
 
         }if (!foodId.isEmpty()&&foodId!=null){
             loadListFoodDetail(foodId);
         }
+
+
     }
 
     private void loadListFoodDetail(String foodId) {
         food.child(foodId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                Food food=snapshot.getValue(Food.class);
+                 currentfood=snapshot.getValue(Food.class);
 
                 //Set Image
-                Picasso.with(getBaseContext()).load(food.getImage()).into(imgFood);
-                txtPriceDetail.setText(food.getPrice());
-                txtPrice.setText(food.getPrice());
-                txtName.setText(food.getName());
+                Picasso.with(getBaseContext()).load(currentfood.getImage()).into(imgFood);
+                txtPriceDetail.setText(currentfood.getPrice());
+                txtPrice.setText(currentfood.getPrice());
+                txtName.setText(currentfood.getName());
+                //Lấy đc id nhưng chưa biết map qua category như nào :(
+                txtCate.setText(currentfood.getMenuId());
 
             }
 

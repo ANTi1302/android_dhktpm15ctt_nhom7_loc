@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity8">
+    tools:context=".CartActivity">
     <ImageView
         android:id="@+id/img_back"
         android:layout_width="wrap_content"
@@ -32,16 +32,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="374dp"
-        android:layout_height="565dp"
+        android:id="@+id/cart_list"
+        android:layout_width="390dp"
+        android:layout_height="470dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/total_order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_back" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnOrder"
         android:layout_width="416dp"
         android:layout_height="67dp"
         android:backgroundTint="#1C9545"
@@ -52,5 +54,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/total_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="Total:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/price_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/total_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toEndOf="@+id/total_order"
+        app:layout_constraintTop_toTopOf="@+id/total_order"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

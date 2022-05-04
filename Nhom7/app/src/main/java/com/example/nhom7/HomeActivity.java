@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nhom7.HolderViewItem.FoodViewHolder;
@@ -72,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
         img4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, MainActivity8.class);
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
                 startActivity(intent);
             }
         });
@@ -113,7 +112,6 @@ public class HomeActivity extends AppCompatActivity {
                         Toast.makeText(HomeActivity.this, "" + clickItem.getName(), Toast.LENGTH_LONG).show();
                         Intent foodList=new Intent(HomeActivity.this,FoodDetailActivity.class);
                         foodList.putExtra("FoodId",adapter_food.getRef(position).getKey());
-
                         startActivity(foodList);
                     }
                 });
@@ -138,10 +136,7 @@ public class HomeActivity extends AppCompatActivity {
                         Intent foodList=new Intent(HomeActivity.this,FoodListActivity.class);
                         Intent foodListDetail=new Intent(HomeActivity.this,FoodDetailActivity.class);
                         foodList.putExtra("CategoryId",adapter_menu.getRef(position).getKey());
-                        foodList.putExtra("CategoryName",clickItem.getName());
-                        foodListDetail.putExtra("CategoryName",clickItem.getName());
                         startActivity(foodList);
-                        startActivity(foodListDetail);
                     }
                 });
             }
