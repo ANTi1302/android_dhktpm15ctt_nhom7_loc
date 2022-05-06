@@ -97,7 +97,7 @@ public class CartActivity extends AppCompatActivity {
         //Category total price
         int total = 0;
         for (Order order:carts)
-            total+=(Integer.parseInt(order.getPrice()))*(Integer.parseInt(order.getQuality()));
+            total+=(Integer.parseInt(order.getPrice()))*(Integer.parseInt(order.getQuality()))+55;
         Locale local=new Locale("en","US");
         NumberFormat fmt=NumberFormat.getCurrencyInstance(local);
         txtTotalPrice.setText(fmt.format(total));
