@@ -25,10 +25,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.BreakIterator;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class FoodDetailActivity extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference food;
-    TextView txtName,txtPriceDetail,txtCate,txtCount,txtPrice;
+    TextView txtName,txtPriceDetail,txtCate,txtCount,txtPrice, txtPriceShip,txtPriceOrg,txtTotalPrice;
     ImageView imgFood, imgBack;
     Button btnAddFood;
     ImageButton btnSub,btnRemove,btnAddCart;
@@ -48,6 +52,11 @@ public class FoodDetailActivity extends AppCompatActivity {
         txtName=findViewById(R.id.name_food_detail);
         txtPriceDetail=findViewById(R.id.price_food_detail);
         txtPrice=findViewById(R.id.price);
+        txtPriceShip=findViewById(R.id.ship);
+        txtPriceShip.setText("5");
+        txtPriceOrg=findViewById(R.id.price_ogirinal);
+        txtPriceOrg.setText("50");
+        txtTotalPrice=findViewById(R.id.total);
         txtCate=findViewById(R.id.category_name_detail);
         imgFood=findViewById(R.id.img_fooddetail);
         imgBack=findViewById(R.id.imgBackDetail);
@@ -125,6 +134,15 @@ public class FoodDetailActivity extends AppCompatActivity {
                 txtName.setText(currentfood.getName());
                 //Lấy đc id nhưng chưa biết map qua category như nào :(
                 txtCate.setText(currentfood.getMenuId());
+                Locale local=new Locale("en","US");
+                NumberFormat fmt=NumberFormat.getCurrencyInstance(local);
+                int giaTien=0;
+                giaTien=(Integer.parseInt(txtPrice.getText().toString())*(Integer.parseInt(txtCount.getText().toString())));
+                txtPrice.setText(String.valueOf(giaTien));
+                int total = 0;
+                    total=(Integer.parseInt(txtPrice.getText().toString())+(Integer.parseInt(txtPriceOrg.getText().toString()))+(Integer.parseInt(txtPriceShip.getText().toString())));
+
+                txtTotalPrice.setText(fmt.format(total));
 
             }
 
@@ -136,6 +154,15 @@ public class FoodDetailActivity extends AppCompatActivity {
     }
 
     public  void setSolanClick(){
-        txtCount.setText( mLesson+"");
+        txtCount.setText( String.valueOf(mLesson));
+        Locale local=new Locale("en","US");
+        NumberFormat fmt=NumberFormat.getCurrencyInstance(local);
+        int giaTien=0;
+        giaTien=(Integer.parseInt(txtPriceDetail.getText().toString())*(Integer.parseInt(txtCount.getText().toString())));
+        txtPrice.setText(String.valueOf(giaTien));
+        int total = 0;
+        total=(Integer.parseInt(txtPrice.getText().toString())+(Integer.parseInt(txtPriceOrg.getText().toString()))+(Integer.parseInt(txtPriceShip.getText().toString())));
+
+        txtTotalPrice.setText(fmt.format(total));
     }
 }

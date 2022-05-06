@@ -63,7 +63,7 @@
         app:layout_constraintStart_toStartOf="@+id/ship" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/txtPriceOrg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="21dp"
@@ -84,7 +84,7 @@
         android:textColor="#A3000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView24"
+        app:layout_constraintBottom_toTopOf="@+id/txtPriceOrg"
         app:layout_constraintEnd_toStartOf="@+id/ship"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView21" />
@@ -102,7 +102,7 @@
         app:layout_constraintBottom_toTopOf="@+id/addFood"
         app:layout_constraintEnd_toStartOf="@+id/total"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView24" />
+        app:layout_constraintStart_toStartOf="@+id/txtPriceOrg" />
 
     <TextView
         android:id="@+id/textView21"

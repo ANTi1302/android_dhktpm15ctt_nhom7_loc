@@ -28,7 +28,7 @@ import java.util.Locale;
 
 public class CartActivity extends AppCompatActivity {
     private ImageView img1;
-    private Button btn1;
+    private Button btn1,btnDelete;
     private TextView txtTotalPrice;
     private Button btnOrder;
 
@@ -40,6 +40,7 @@ public class CartActivity extends AppCompatActivity {
 
     private List<Order> carts=new ArrayList<>();
     private CartAdapter adapter;
+    private String foodId="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,8 @@ public class CartActivity extends AppCompatActivity {
         //Init Firebase
         database=FirebaseDatabase.getInstance();
         request=database.getReference("Requests");
+
+
         img1 = (ImageView) findViewById(R.id.img_back);
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +71,15 @@ public class CartActivity extends AppCompatActivity {
         //get id for view
         txtTotalPrice= findViewById(R.id.price_order);
         btnOrder= findViewById(R.id.btnOrder);
+        btnDelete=findViewById(R.id.btnREmoveOrder);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Database(getBaseContext()).deleteToCart();
+                Toast.makeText(CartActivity.this,"Xóa đơn hàng thành công",Toast.LENGTH_SHORT).show();
+                loadListFood();
+            }
+        });
 
         recyclerView=findViewById(R.id.cart_list);
         recyclerView.setHasFixedSize(true);

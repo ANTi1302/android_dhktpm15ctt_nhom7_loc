@@ -100,7 +100,10 @@ public class FoodListActivity extends AppCompatActivity {
                 foodViewHolder.setItemClickListen(new ItemClickListen() {
                     @Override
                     public void OnClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(FoodListActivity.this,""+local.getName(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(FoodListActivity.this, "" + local.getName(), Toast.LENGTH_LONG).show();
+                        Intent foodList=new Intent(FoodListActivity.this,FoodDetailActivity.class);
+                        foodList.putExtra("FoodId",adapter.getRef(position).getKey());
+                        startActivity(foodList);
                     }
                 });
             }

@@ -17,6 +17,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/group_5" />
 
+    <Spinner
+        android:id="@+id/spinnerCountries"
+        android:layout_width="124dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextPhone"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -48,15 +60,15 @@
 
     <EditText
         android:id="@+id/editTextPhone"
-        android:layout_width="341dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="252dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="60dp"
         android:ems="5"
-        android:hint="+84 943312345"
+        android:hint="0943312345"
         android:inputType="phone"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -65,13 +77,14 @@
         android:layout_width="342dp"
         android:layout_height="72dp"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="35dp"
         android:backgroundTint="#E23C3C"
         android:text="Đăng nhập"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
@@ -79,7 +92,7 @@
         android:id="@+id/tvDangky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="28dp"
         android:text="Đăng ký"
         android:textColor="#B51313"
         android:textSize="20sp"

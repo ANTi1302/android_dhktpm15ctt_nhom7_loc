@@ -57,5 +57,10 @@ public void addToCart(Order order){
         String query=String.format("DELETE FROM OrderDetail");
         db.execSQL(query);
     }
+    public void deleteToCartByIdOrder(){
+        SQLiteDatabase db=getReadableDatabase();
+        String query=String.format("DELETE FROM OrderDetail");
+        db.execSQL(query);
+    }
 
 }

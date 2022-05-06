@@ -1,38 +1,44 @@
 package com.example.nhom7.Model;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class User {
-    private String Name, Password,Phone;
+    public String name;
+    public String pass;
+    public String phone;
+
+    public User(String name, String pass, String phone) {
+        this.name = name;
+        this.pass = pass;
+        this.phone = phone;
+    }
 
     public User() {
     }
 
-    public User(String name, String password) {
-        Name = name;
-        Password = password;
-
-    }
-
-    public String getPhone() {
-        return Phone;
-    }
-
-    public void setPhone(String phone) {
-        Phone = phone;
-    }
-
     public String getName() {
-        return Name;
-    }
-
-    public String getPassword() {
-        return Password;
+        return name;
     }
 
     public void setName(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
-    public void setPassword(String password) {
-        this.Password = password;
+    public String getPass() {
+        return pass;
     }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
 }

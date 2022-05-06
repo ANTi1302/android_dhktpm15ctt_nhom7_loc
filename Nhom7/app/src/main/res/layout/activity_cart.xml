@@ -43,23 +43,35 @@
         app:layout_constraintTop_toBottomOf="@+id/img_back" />
 
     <Button
-        android:id="@+id/btnOrder"
+        android:id="@+id/btnREmoveOrder"
         android:layout_width="416dp"
         android:layout_height="67dp"
         android:backgroundTint="#1C9545"
-        android:text="Đặt món"
+        android:text="Hủy Món"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="416dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#1C9545"
+        android:text="Đặt món"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnREmoveOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/total_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
         android:text="Total:"
         android:textColor="@color/black"
         android:textSize="20dp"
