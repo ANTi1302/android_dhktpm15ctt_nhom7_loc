@@ -3,75 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_10" />
+    android:layout_height="200dp">
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/txtPriceCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView30"
+        app:layout_constraintEnd_toEndOf="@+id/txtNameCart"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView30"
-        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+        app:layout_constraintStart_toStartOf="@+id/txtNameCart"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameCart" />
+
     <TextView
-        android:id="@+id/textView30"
+        android:id="@+id/txtNameCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:text="TextView"
-        android:layout_marginStart="25dp"
         android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
-        tools:layout_editor_absoluteX="113dp"
-        tools:layout_editor_absoluteY="19dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton11"
-        android:layout_width="11dp"
-        android:layout_height="13dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/add_fill0_wght400_grad0_opsz48"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/imageButton10"
-        android:layout_width="15dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="76dp"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/remove_fill0_wght400_grad0_opsz48"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toStartOf="@+id/txtCountCart"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/txtCountCart"
         android:layout_width="27dp"
         android:layout_height="15dp"
-        android:layout_marginEnd="22dp"
+        android:layout_marginEnd="64dp"
         android:text="1"
-        android:textColor="#0C0C0C"
 
+        android:textColor="#0C0C0C"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton10"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton11"
-        app:layout_constraintTop_toTopOf="@+id/imageButton10" />
+        app:layout_constraintBottom_toBottomOf="@+id/txtPriceCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtNameCart"
+        app:layout_constraintVertical_bias="0.509"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
