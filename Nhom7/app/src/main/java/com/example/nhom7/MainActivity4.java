@@ -43,7 +43,7 @@ public class MainActivity4 extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         editText = findViewById(R.id.editTextNumber);
 
-        String phonenumber = getIntent().getStringExtra("phonenumber");
+        String phonenumber = getIntent().getStringExtra("phoneNumber");
         sendVerificationCode(phonenumber);
 
         btnXacNhan = (Button) findViewById(R.id.btnDangky2);
@@ -90,7 +90,7 @@ public class MainActivity4 extends AppCompatActivity {
     private void sendVerificationCode(String phonenumber) {
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber("+84 " + phonenumber)       // Phone number to verify
+                        .setPhoneNumber("+84" + phonenumber)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(mCallBack)          // OnVerificationStateChangedCallbacks

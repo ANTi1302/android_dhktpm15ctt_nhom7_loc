@@ -51,7 +51,7 @@ public class Register extends AppCompatActivity {
                 pass=editTextTextPassword.getText().toString();
                 name=editTextTextPersonName.getText().toString();
 
-                editTextPhone = (EditText) findViewById(R.id.editTextPhone);
+                editTextPhone = (EditText) findViewById(R.id.editPhoneDK);
                 String number= editTextPhone.getText().toString();
                 String mobile = editTextPhone.getText().toString().trim();
                 if(TextUtils.isEmpty(number)|| mobile.length() < 9){
