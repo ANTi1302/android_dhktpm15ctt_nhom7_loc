@@ -1,0 +1,287 @@
+{
+  "Category": {
+    "01": {
+      "Image": "https://i.pinimg.com/564x/4f/18/3f/4f183fc21d358cbe3f3ffdc12522d545.jpg",
+      "Name": "Món Việt"
+    },
+    "02": {
+      "Image": "https://i.pinimg.com/564x/32/22/d7/3222d71465e67a0db9e2cf12501ea99a.jpg",
+      "Name": "Đồ uống"
+    },
+    "03": {
+      "Image": "https://i.pinimg.com/564x/9f/4d/7d/9f4d7d10891dcc0e0c7b4dcc113740bf.jpg",
+      "Name": "Ăn vặt"
+    },
+    "04": {
+      "Image": "https://i.pinimg.com/564x/34/e7/f2/34e7f2003af08d7037681cfb7a35a6ef.jpg",
+      "Name": "Tráng miệng"
+    },
+    "05": {
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "Name": "Món Quốc Tế"
+    },
+    "06": {
+      "Image": "https://i.pinimg.com/564x/2c/4d/dc/2c4ddcf9882f17bd7975019ba45ec3d7.jpg",
+      "Name": "Trà Sữa"
+    },
+    "07": {
+      "Image": "https://i.pinimg.com/564x/d2/d1/83/d2d183935ccf939cd2798cf5513b3f99.jpg",
+      "Name": "Lẩu/Nướng"
+    },
+    "08": {
+      "Image": "https://i.pinimg.com/564x/5b/7b/75/5b7b7539f19c89aa1deea885f2d894c3.jpg",
+      "Name": "Đặc Sản"
+    }
+  },
+  "Food": {
+    "01": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "02",
+      "Name": "Humbuger",
+      "Price": "20"
+    },
+    "02": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "02",
+      "Name": "Humbuger01",
+      "Price": "20"
+    },
+    "03": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "05",
+      "Name": "Humbuger02",
+      "Price": "30"
+    },
+    "04": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "01",
+      "Name": "Humbuger03",
+      "Price": "16"
+    },
+    "05": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "05",
+      "Name": "Humbuger04",
+      "Price": "56"
+    },
+    "06": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "01",
+      "Name": "Humbuger05",
+      "Price": "20"
+    },
+    "07": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "08",
+      "Name": "Humbuger06",
+      "Price": "21"
+    },
+    "08": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "02",
+      "Name": "Humbuger07",
+      "Price": "18"
+    },
+    "09": {
+      "Decription": "Sushi é um prato típico da culinária Oriental muito popular no Brasil, quer aprender diversas receitas simples de Sushi",
+      "Discount": "0",
+      "Image": "https://i.pinimg.com/564x/68/ac/f3/68acf35548b0bf18792216555e471ab5.jpg",
+      "MenuId": "08",
+      "Name": "Humbuger08",
+      "Price": "35"
+    }
+  },
+  "User": {
+    "-N1KHs_L5r8RJojvMm4x": {
+      "name": "Nguyễn Văn A",
+      "pass": "1223566",
+      "phone": "0948018633"
+    },
+    "-N1KtRU5t6M2DTSRzwcC": {
+      "name": "Trần Thị Thủy Chung",
+      "pass": "1234556789",
+      "phone": "0948081123"
+    },
+    "-N1NMMF8CD8UcJEa2ge5": {
+      "name": "Nguyễn Văn A",
+      "pass": "1234",
+      "phone": "0932904529"
+    },
+    "-N1NODrcYsPZ69haoUQM": {
+      "name": "Nguyễn Văn B",
+      "pass": "1234567",
+      "phone": "0123456789"
+    },
+    "-N1NQMG9-C-InjFCx1zT": {
+      "name": "Nguy",
+      "pass": "123456",
+      "phone": "0789654123"
+    },
+    "-N1NQO2KZ1WF7AacVsry": {
+      "name": "Nguyễn Văn Đạt",
+      "pass": "123456",
+      "phone": "0932904529"
+    },
+    "-N1NRC8CZJ2kyvtMS9-T": {
+      "name": "Nguyễn Văn A",
+      "pass": "12304",
+      "phone": "+84930410500"
+    },
+    "-N1NSq_Ed5M1_2br2oyl": {
+      "name": "Nguyễn Văn A",
+      "pass": "12365478",
+      "phone": "097569855"
+    },
+    "-N1NUNV7udKIpCDn9RQv": {
+      "name": "Nguyễn Văn A",
+      "pass": "532487",
+      "phone": "+84 555555555"
+    },
+    "-N1Nk1iT3C9GoHxcVnxu": {
+      "name": "Nguyễn Văn A",
+      "pass": "123456",
+      "phone": "577276717575"
+    },
+    "-N1OYme1NBMy2ITdVJ2b": {
+      "name": "Nguyễn Văn A",
+      "pass": "123456789",
+      "phone": "0907408575"
+    },
+    "-N1O_s2gyfOCalA_2vkf": {
+      "name": "Nguyễn Văn A",
+      "pass": "123456",
+      "phone": "01217329240"
+    },
+    "-N1Oc1DScn9IrZ0JFprq": {
+      "name": "Nguyễn Văn A",
+      "pass": "123",
+      "phone": "0907408575"
+    },
+    "-N1OfJZG9miIpZZuP7Zm": {
+      "name": "Nguyễn Văn A",
+      "pass": "a",
+      "phone": "111111111222222"
+    },
+    "-N1Oh4gzR_XwpY8moYIF": {
+      "name": "Nguyễn Văn A",
+      "pass": "aa",
+      "phone": "0333333333333"
+    },
+    "-N1OhwjE_sMEJkjP7nN-": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "11122223333333"
+    },
+    "-N1OlG251qIiCRuG8_d9": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "22333333333333"
+    },
+    "-N1OlvLAtQAmILy2K6wI": {
+      "name": "Nguyễn Văn A",
+      "pass": "6",
+      "phone": "56666666666"
+    },
+    "-N1On1YvAC0G0YDIHQ0R": {
+      "name": "Nguyễn Văn A",
+      "pass": "4",
+      "phone": "233444444444"
+    },
+    "-N1OoKFZ9ZDhjqmzrgRJ": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "133333333333"
+    },
+    "-N1OoyUbjjQ-ZZC9qfIP": {
+      "name": "Nguyễn Văn A5",
+      "pass": "5",
+      "phone": "245555555"
+    },
+    "-N1OqXHAyg0WJqHo5QWv": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "2333333333"
+    },
+    "-N1Or73fXLaYnWt6Oe1y": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "233333333"
+    },
+    "-N1Os9PCkPBmJRt4Pjoq": {
+      "name": "Nguyễn Văn A",
+      "pass": "2",
+      "phone": "222222222222"
+    },
+    "-N1Osxpd0YjmmZKu8w4A": {
+      "name": "Nguyễn Văn A",
+      "pass": "4",
+      "phone": "34444444444"
+    },
+    "-N1OtDEqLROMaOudA_c_": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "23333333333"
+    },
+    "-N1Ow1BM3Gd6iugnX08c": {
+      "name": "Nguyễn Văn A",
+      "pass": "4",
+      "phone": "24444444444"
+    },
+    "-N1Oz0A5j2w2wFC6Gxjp": {
+      "name": "Nguyễn Văn A",
+      "pass": "222",
+      "phone": "222222222222"
+    },
+    "-N1Ozl6DO5PGo1QnGowe": {
+      "name": "Nguyễn Văn A",
+      "pass": "2",
+      "phone": "222222222"
+    },
+    "-N1P2qB8InSQ-9mW-1xF": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "2333333333"
+    },
+    "-N1P3R29tNbBK3FOB6eU": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "23333333333"
+    },
+    "-N1P4Eqhb86a8NyhnnYY": {
+      "name": "Nguyễn Văn A",
+      "pass": "3",
+      "phone": "2333333333"
+    },
+    "-N1P4iDNx4nKnit5t6Xg": {
+      "name": "Nguyễn Văn A",
+      "pass": "2",
+      "phone": "2222222222"
+    },
+    "-N1P7WVfGRgqjtGvh9GU": {
+      "name": "Nguyễn Văn A",
+      "pass": "4",
+      "phone": "2334444444"
+    },
+    "users": {
+      "Name": "Hoàng Thị Ngọc Ánh",
+      "Pass": "123466l",
+      "Phone": "0948018633"
+    }
+  }
+}
