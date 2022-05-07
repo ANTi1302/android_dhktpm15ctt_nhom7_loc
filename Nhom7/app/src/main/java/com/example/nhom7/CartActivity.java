@@ -1,20 +1,26 @@
 package com.example.nhom7;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nhom7.Common.Common;
 import com.example.nhom7.DB.Database;
 import com.example.nhom7.HolderViewItem.CartAdapter;
 import com.example.nhom7.HolderViewItem.FoodViewOfListHolder;
+import com.example.nhom7.Model.Bill;
 import com.example.nhom7.Model.Food;
 import com.example.nhom7.Model.Order;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -33,7 +39,7 @@ public class CartActivity extends AppCompatActivity {
     private Button btnOrder;
 
     private FirebaseDatabase database;
-    private DatabaseReference request;
+    private DatabaseReference requests;
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -47,7 +53,7 @@ public class CartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cart);
         //Init Firebase
         database=FirebaseDatabase.getInstance();
-        request=database.getReference("Requests");
+        requests=database.getReference("Bill");
 
 
         img1 = (ImageView) findViewById(R.id.img_back);
@@ -62,7 +68,7 @@ public class CartActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(CartActivity.this,"Đặt món thành công",Toast.LENGTH_SHORT).show();
+                showAlertDialog();
             }
         });
 
@@ -86,6 +92,47 @@ public class CartActivity extends AppCompatActivity {
         layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         loadListFood();
+    }
+
+    private void showAlertDialog() {
+        AlertDialog.Builder alBuilder= new AlertDialog.Builder(CartActivity.this);
+        alBuilder.setTitle("One more step!");
+        alBuilder.setMessage("Enter your address");
+
+        final EditText txtAddress= new EditText(CartActivity.this);
+        LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT
+        );
+        txtAddress.setLayoutParams(lp);
+        alBuilder.setView(txtAddress);
+
+        alBuilder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Bill bill=new Bill(Common.currentUser.getPhone(),
+
+                        txtAddress.getText().toString(),
+                        Common.currentUser.getName(),
+                        txtTotalPrice.getText().toString(),
+                        carts);
+
+                //Submit to FireBase
+                requests.child(String.valueOf(System.currentTimeMillis()))
+                        .setValue(bill);
+                //Delete cart
+                new Database(getBaseContext()).deleteToCart();
+                Toast.makeText(CartActivity.this,"Đặt món thành công",Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+        alBuilder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        alBuilder.show();
     }
 
     private void loadListFood() {
