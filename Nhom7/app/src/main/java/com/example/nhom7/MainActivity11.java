@@ -41,7 +41,7 @@ public class MainActivity11 extends AppCompatActivity {
         img4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity11.this, MainActivity9.class);
+                Intent intent = new Intent(MainActivity11.this, AccountActivity.class);
                 startActivity(intent);
             }
         });

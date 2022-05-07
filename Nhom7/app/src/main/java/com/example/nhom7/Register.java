@@ -1,39 +1,27 @@
 package com.example.nhom7;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.nhom7.HolderViewItem.FoodViewOfListHolder;
-import com.example.nhom7.Model.Food;
+import com.example.nhom7.Common.Common;
 import com.example.nhom7.Model.User;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.jar.Attributes;
-
-public class MainActivity3 extends AppCompatActivity {
+public class Register extends AppCompatActivity {
     private Button btn1;
     private EditText editTextPhone;
     private EditText editTextTextPersonName;
@@ -43,6 +31,7 @@ public class MainActivity3 extends AppCompatActivity {
     private  DatabaseReference mDatabase;
     private FirebaseDatabase mFirebaseInstance;
     private String userId;
+    private User user;
     private static final String TAG = MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +55,7 @@ public class MainActivity3 extends AppCompatActivity {
                 String number= editTextPhone.getText().toString();
                 String mobile = editTextPhone.getText().toString().trim();
                 if(TextUtils.isEmpty(number)|| mobile.length() < 9){
-                    Toast.makeText(MainActivity3.this, "Vui lòng điền đầy đủ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Vui lòng điền đầy đủ", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(userId)) {
@@ -81,10 +70,11 @@ public class MainActivity3 extends AppCompatActivity {
                 //  String b = number;
                 // mDatabase.child("Phone").setValue(b);
 
-                Intent intent = new Intent(MainActivity3.this, HomeActivity.class);
+                Intent intent = new Intent(Register.this, HomeActivity.class);
+                Common.currentUser= user;
                 // intent.putExtra("mobile", number);
                 startActivity(intent);
-
+                finish();
             }
         });
     }
@@ -140,7 +130,7 @@ public class MainActivity3 extends AppCompatActivity {
             userId = mDatabase.push().getKey();
         }
 
-        User user = new User(name,pass,number);
+         user = new User(name,pass,number);
 
         mDatabase.child(userId).setValue(user);
 

@@ -14,15 +14,8 @@ import android.widget.TextView;
 
 
 import com.example.nhom7.HolderViewItem.CountryData;
-import com.google.android.gms.tasks.TaskExecutors;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.ktx.Firebase;
-
-import java.text.BreakIterator;
-import java.util.concurrent.TimeUnit;
 
 public class MainActivity2 extends AppCompatActivity {
     private Button btn1;
@@ -72,7 +65,7 @@ public class MainActivity2 extends AppCompatActivity {
         tvt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+                Intent intent = new Intent(MainActivity2.this, Register.class);
                 startActivity(intent);
             }
         });

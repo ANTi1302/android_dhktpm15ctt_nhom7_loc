@@ -19,7 +19,7 @@
             android:name=".MainActivity10"
             android:exported="false" />
         <activity
-            android:name=".MainActivity9"
+            android:name=".AccountActivity"
             android:exported="false" />
         <activity
             android:name=".CartActivity"
@@ -37,7 +37,7 @@
             android:name=".MainActivity4"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"

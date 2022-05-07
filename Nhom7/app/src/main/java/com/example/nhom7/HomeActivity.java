@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         img3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, MainActivity9.class);
+                Intent intent = new Intent(HomeActivity.this, AccountActivity.class);
                 startActivity(intent);
             }
         });

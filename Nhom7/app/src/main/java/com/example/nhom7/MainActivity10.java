@@ -20,7 +20,7 @@ public class MainActivity10 extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity10.this, MainActivity9.class);
+                Intent intent = new Intent(MainActivity10.this, AccountActivity.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +44,7 @@ public class MainActivity10 extends AppCompatActivity {
         img4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity10.this, MainActivity9.class);
+                Intent intent = new Intent(MainActivity10.this, AccountActivity.class);
                 startActivity(intent);
             }
         });

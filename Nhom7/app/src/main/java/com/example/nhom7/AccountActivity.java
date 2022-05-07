@@ -8,18 +8,36 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity9 extends AppCompatActivity {
+import com.example.nhom7.Common.Common;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class AccountActivity extends AppCompatActivity {
     private ImageView img1, img2,img3,img4;
     private TextView textView;
+    private FirebaseDatabase database;
+    private DatabaseReference category;
+    private TextView textFullName,txtSdt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main9);
+        setContentView(R.layout.activity_account);
+
+        //Init Firebase
+        database= FirebaseDatabase.getInstance();
+        category=database.getReference("Category");
+
+        textFullName= findViewById(R.id.txtHoTen);
+        txtSdt= findViewById(R.id.txtSdt);
+        textFullName.setText(Common.currentUser.getName());
+        txtSdt.setText(Common.currentUser.getPhone());
+
+
         img1 = (ImageView) findViewById(R.id.imageView18);
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity9.this, HomeActivity.class);
+                Intent intent = new Intent(AccountActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -27,7 +45,7 @@ public class MainActivity9 extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity9.this, MainActivity10.class);
+                Intent intent = new Intent(AccountActivity.this, MainActivity10.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +53,7 @@ public class MainActivity9 extends AppCompatActivity {
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity9.this, HomeActivity.class);
+                Intent intent = new Intent(AccountActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +61,7 @@ public class MainActivity9 extends AppCompatActivity {
         img3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity9.this, MainActivity11.class);
+                Intent intent = new Intent(AccountActivity.this, MainActivity11.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +69,7 @@ public class MainActivity9 extends AppCompatActivity {
         img4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity9.this, MainActivity9.class);
+                Intent intent = new Intent(AccountActivity.this, AccountActivity.class);
                 startActivity(intent);
             }
         });
