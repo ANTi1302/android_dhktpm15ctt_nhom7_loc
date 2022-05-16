@@ -31,7 +31,6 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/timKiem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.595"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,33 +67,25 @@
         app:srcCompat="@drawable/sd" />
 
 
-<!--    <androidx.appcompat.widget.SearchView-->
-<!--        android:id="@+id/searchview"-->
-<!--        android:layout_width="324dp"-->
-<!--        android:layout_height="53dp"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        android:layout_marginEnd="25dp"-->
-<!--        android:background="#E5ECE6"-->
-<!--        android:drawableEnd="@drawable/icon_and_textq"-->
-<!--        app:iconifiedByDefault="false"-->
-<!--        app:queryHint="Bạn muốn ăn gì?"-->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchview"
+        android:layout_width="324dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="25dp"
+        android:background="#E5ECE6"
+        android:drawableEnd="@drawable/icon_and_textq"
+        app:iconifiedByDefault="false"
+        app:queryHint="Bạn muốn ăn gì?"
 
 
-<!--        android:ems="10"-->
-<!--        android:hint="Bạn muốn ăn gì nào?"-->
-<!--        android:inputType="textPersonName"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/imageView18" />-->
-    <EditText
-        android:id="@+id/timKiem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyview"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        android:ems="10"
+        android:hint="Bạn muốn ăn gì nào?"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyview"
