@@ -66,6 +66,9 @@
 <p align="center">
   <img src="/img/firebase_home.png" alt="" width="400" height="480" >
 </p>
+<p align="center">
+  <img src="/img/sqlite.png" alt="" width="1423" height="398" >
+</p>
 
 
 
