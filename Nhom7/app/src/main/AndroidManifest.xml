@@ -13,10 +13,10 @@
             android:name=".FoodDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity11"
+            android:name=".MainActivity10"
             android:exported="false" />
         <activity
-            android:name=".MainActivity10"
+            android:name=".MainActivity11"
             android:exported="false" />
         <activity
             android:name=".AccountActivity"
@@ -37,10 +37,10 @@
             android:name=".MainActivity4"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listViewFood"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity11">
+
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="wrap_content"
@@ -13,7 +15,9 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/group_26" />
+        app:srcCompat="@drawable/group_26"
+
+        />
 
     <TextView
         android:id="@+id/textView32"
@@ -27,10 +31,12 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/timKiem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.595"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="wrap_content"
@@ -62,33 +68,47 @@
         app:srcCompat="@drawable/sd" />
 
 
+<!--    <androidx.appcompat.widget.SearchView-->
+<!--        android:id="@+id/searchview"-->
+<!--        android:layout_width="324dp"-->
+<!--        android:layout_height="53dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginEnd="25dp"-->
+<!--        android:background="#E5ECE6"-->
+<!--        android:drawableEnd="@drawable/icon_and_textq"-->
+<!--        app:iconifiedByDefault="false"-->
+<!--        app:queryHint="Bạn muốn ăn gì?"-->
+
+
+<!--        android:ems="10"-->
+<!--        android:hint="Bạn muốn ăn gì nào?"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView18" />-->
     <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="362dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="25dp"
-        android:background="#E5ECE6"
-        android:drawableEnd="@drawable/icon_and_textq"
-
-
-        android:ems="10"
-        android:hint="Bạn muốn ăn gì nào?"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
-
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="wrap_content"
+        android:id="@+id/timKiem"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="120dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyview"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyview"
+        android:layout_width="402dp"
+        android:layout_height="474dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView17"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        app:srcCompat="@drawable/search_1" />
+
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

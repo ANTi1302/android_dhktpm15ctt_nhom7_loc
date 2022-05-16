@@ -10,11 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.nhom7.Common.Common;
+import com.example.nhom7.Model.User;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +30,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 import java.util.concurrent.TimeUnit;
@@ -35,6 +41,9 @@ public class MainActivity4 extends AppCompatActivity {
     private String verificationId;
     private FirebaseAuth mAuth;
     private EditText editText;
+    private String userId;
+    private DatabaseReference mDatabase;
+    private User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +51,8 @@ public class MainActivity4 extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         editText = findViewById(R.id.editTextNumber);
-
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+         mDatabase = database.getInstance().getReference().child("User");
         String phonenumber = getIntent().getStringExtra("phoneNumber");
         sendVerificationCode(phonenumber);
 
@@ -59,9 +69,31 @@ public class MainActivity4 extends AppCompatActivity {
                     return;
                 }
                 verifyCode(code);
+                String pass, name;
+                pass=null;
+                name=null;
+
+
+                createUser(name, pass,phonenumber);
+                Common.currentUser= user;
+
+//                    createUser(phonenumber);
+
 
             }
         });
+    }
+
+    private void  createUser(String name,String pass,String phonenumber) {
+        if (TextUtils.isEmpty(userId)) {
+            userId = mDatabase.push().getKey();
+        }
+
+        user = new User(name, pass,phonenumber);
+
+        mDatabase.child(userId).setValue(user);
+
+
     }
 
     private void verifyCode(String code) {
@@ -77,6 +109,7 @@ public class MainActivity4 extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             Intent intent = new Intent(MainActivity4.this, HomeActivity.class);
+                            Common.currentUser= user;
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
 
@@ -96,6 +129,7 @@ public class MainActivity4 extends AppCompatActivity {
                         .setCallbacks(mCallBack)          // OnVerificationStateChangedCallbacks
                         .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
+
         // getInstance().verifyPhoneNumber(
         //   phonenumber,
         //    60,

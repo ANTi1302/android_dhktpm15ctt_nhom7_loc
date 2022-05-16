@@ -8,6 +8,10 @@ public class User {
     public String pass;
     public String phone;
 
+    public User(String phone) {
+        this.phone = phone;
+    }
+
     public User(String name, String pass, String phone) {
         this.name = name;
         this.pass = pass;

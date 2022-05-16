@@ -29,7 +29,8 @@ public class AccountActivity extends AppCompatActivity {
 
         textFullName= findViewById(R.id.txtHoTen);
         txtSdt= findViewById(R.id.txtSdt);
-        textFullName.setText(Common.currentUser.getName());
+
+//        textFullName.setText(Common.currentUser.getName());
         txtSdt.setText(Common.currentUser.getPhone());
 
 
