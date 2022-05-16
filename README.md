@@ -59,6 +59,9 @@
   <img src="/img/account.png" alt="" width="280" height="480" >
 </p>
 <p align="center">
+  <img src="/img/find-food.png" alt="" width="280" height="480" >
+</p>
+<p align="center">
   <img src="/img/firebase_cart.png" alt="" width="400" height="480" >
 <p align="center">
   <img src="/img/firebase_home.png" alt="" width="400" height="480" >
